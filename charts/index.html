@@ -48,23 +48,17 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['USA',  2025],
-          ['China', 1882],
-          ['Japan', 1809],
-          ['Germany', 1322],
-          ['UK', 1122]
-		  ['France', 1114]
-		  ['India', 984]
-		  ['Spain', 711]
-		  ['Netherlands', 665]
-		  ['South Korea', 443]
-		  ['Canada', 441]
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
         ]);
- 
-
 
         var options = {
-          colors: [ '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6', '#67b7dc', '#6894dd', '#6671db', '#8067dc', '#a267db', '#c667db', '#dc67cf']
+          title: 'My Daily Activities'
+		  colors: ['#67b7dc', '#6894dd', '#6671db', '#8067dc', '#a267db']
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -103,13 +97,9 @@
 <main role="main" class="container">
 
 	<div class="starter-template">    
-		<div class="container text-left">
-			<div class="row row-cols-2">
-				<div class="col">
-					<div id="piechart" style="width: 900px; height: 500px;"></div></div>
-				<div class="col"></div>
-			</div>
-		</div>
+
+		<div id="piechart" style="width: 900px; height: 500px;"></div>
+
 	</div>
 
 </main>
